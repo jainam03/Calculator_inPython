@@ -11,6 +11,8 @@ def equals():
     
     global equation_text
     
+    #using try catch block to indentify division with zero 
+    #and use of operators without numeric input
     try:
         total = str(eval(equation_text))
 
@@ -46,12 +48,14 @@ equation_text = ""
 
 equation_label = StringVar()
 
-label = Label(window, textvariable=equation_label, font=('consolas',20), bg="white",width=24, height=2)
+#this will display our input
+label = Label(window, textvariable=equation_label, font=('consolas',20), bg="grey",width=24, height=2)
 label.pack()
 
 frame = Frame(window)
 frame.pack()
 
+#adding the buttons 
 button1 = Button(frame, text=1, height=4, width=9,font=35,command=lambda:button_press(1))
 
 button1.grid(row=0,column=0)
